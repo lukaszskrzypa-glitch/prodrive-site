@@ -80,7 +80,7 @@
 
     .page {
       display: none;
-      min-height: calc(100vh - 76px);
+      min-height: calc(100vh - 72px);
       animation: pageFade 0.28s ease;
     }
 
@@ -188,10 +188,10 @@
     }
 
     .btn-primary:hover {
-  background: var(--orange-dark);
-  transform: translateY(-3px);
-  box-shadow: 0 18px 38px rgba(240, 90, 26, 0.36);
-}
+      background: var(--orange-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(240, 90, 26, 0.36);
+    }
 
     .btn-secondary {
       border-color: rgba(255, 255, 255, 0.3);
@@ -199,11 +199,11 @@
     }
 
     .btn-secondary:hover {
-  border-color: var(--orange);
-  color: var(--orange);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
-}
+      border-color: var(--orange);
+      color: var(--orange);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+    }
 
     .navbar {
       position: sticky;
@@ -386,14 +386,14 @@
     }
 
     .hero-media > img,
-.photo-panel > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.78) contrast(1.08) saturate(1.05);
+    .photo-panel > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.78) contrast(1.08) saturate(1.05);
     }
 
     .hero-media::after,
@@ -515,6 +515,13 @@
       font-weight: 900;
     }
 
+    .number svg {
+      width: 19px;
+      height: 19px;
+      display: block;
+      fill: currentColor;
+    }
+
     .list-item strong {
       display: block;
       margin-bottom: 4px;
@@ -621,11 +628,11 @@
     }
 
     .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: start;
+    }
 
     .contact-methods {
       display: grid;
@@ -648,6 +655,20 @@
     .contact-method:hover {
       transform: translateY(-2px);
       border-color: rgba(240, 90, 26, 0.5);
+    }
+
+    .contact-method:hover .number {
+      background: rgba(240, 90, 26, 0.2);
+    }
+
+    .contact-method strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #fff;
+    }
+
+    .contact-method span {
+      color: var(--muted);
     }
 
     .contact-box {
@@ -763,6 +784,7 @@
 
     .footer-links {
       display: flex;
+      align-items: center;
       gap: 22px;
       flex-wrap: wrap;
     }
@@ -782,6 +804,35 @@
     .footer a:hover,
     .footer button:hover {
       color: var(--orange);
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-socials a {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.045);
+      color: var(--orange);
+    }
+
+    .footer-socials a:hover {
+      transform: translateY(-2px);
+      border-color: rgba(240, 90, 26, 0.5);
+      background: rgba(240, 90, 26, 0.12);
+    }
+
+    .footer-socials svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
 
     .footer-bottom {
@@ -822,10 +873,9 @@
     }
 
     @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
+      section {
+        padding: 64px 18px;
+      }
 
       h1 {
         font-size: clamp(38px, 12vw, 44px);
@@ -952,6 +1002,7 @@
 
       .footer-links {
         flex-direction: column;
+        align-items: flex-start;
         gap: 12px;
       }
     }
@@ -1009,7 +1060,7 @@
             <p>ProDrive to nowoczesna akademia jazdy dla osób, które chcą dobrze przygotować się do egzaminu i czuć się swobodnie za kierownicą od pierwszych kilometrów.</p>
 
             <div class="hero-actions">
-              <button class="btn btn-primary" data-page-link="contact">Zapisz się na kurs</button>
+              <button class="btn btn-primary" data-page-link="contact">Umów pierwszą jazdę</button>
               <button class="btn btn-secondary" data-page-link="offer">Zobacz ofertę</button>
             </div>
 
@@ -1313,90 +1364,84 @@
       </section>
 
       <section>
-  <div class="container contact-grid">
-
-    <div>
-      <h2>Porozmawiajmy o Twojej jeździe.</h2>
-      <p>Powiedz, czy zaczynasz od zera, jesteś przed egzaminem, czy chcesz wrócić do jazdy po przerwie.</p>
-
-      <div class="contact-methods">
-
-        <a class="contact-method" href="tel:882700801">
-          <div class="number">☎</div>
+        <div class="container contact-grid">
           <div>
-            <strong>Telefon</strong>
-            <span>882 700 801</span>
-          </div>
-        </a>
+            <h2>Porozmawiajmy o Twojej jeździe.</h2>
+            <p>Powiedz, czy zaczynasz od zera, jesteś przed egzaminem, czy chcesz wrócić do jazdy po przerwie.</p>
 
-        <a class="contact-method" href="mailto:prodrive@gmail.com">
-          <div class="number">@</div>
-          <div>
-            <strong>E-mail</strong>
-            <span>prodrive@gmail.com</span>
-          </div>
-        </a>
+            <div class="contact-methods">
+              <a class="contact-method" href="tel:882700801">
+                <div class="number">☎</div>
+                <div>
+                  <strong>Telefon</strong>
+                  <span>882 700 801</span>
+                </div>
+              </a>
 
-        <a class="contact-method" href="https://www.instagram.com/prodrive_lublin/" target="_blank">
-          <div class="number">
-            <img src="instagram.png" alt="Instagram">
-          </div>
-          <div>
-            <strong>Instagram</strong>
-            <span>@prodrive_lublin</span>
-          </div>
-        </a>
+              <a class="contact-method" href="mailto:prodrive@gmail.com">
+                <div class="number">@</div>
+                <div>
+                  <strong>E-mail</strong>
+                  <span>prodrive@gmail.com</span>
+                </div>
+              </a>
 
-        <a class="contact-method" href="https://www.facebook.com/profile.php?id=61586855786739" target="_blank">
-          <div class="number">
-            <img src="facebook.png" alt="Facebook">
+              <a class="contact-method" href="https://www.instagram.com/prodrive_lublin/" target="_blank" rel="noopener noreferrer">
+                <div class="number" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 12 16.5 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.25 6a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 17.25 6z"/></svg>
+                </div>
+                <div>
+                  <strong>Instagram</strong>
+                  <span>@prodrive_lublin</span>
+                </div>
+              </a>
+
+              <a class="contact-method" href="https://www.facebook.com/profile.php?id=61586855786739" target="_blank" rel="noopener noreferrer">
+                <div class="number" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06z"/></svg>
+                </div>
+                <div>
+                  <strong>Facebook</strong>
+                  <span>ProDrive</span>
+                </div>
+              </a>
+            </div>
           </div>
-          <div>
-            <strong>Facebook</strong>
-            <span>ProDrive</span>
+
+          <div class="contact-box">
+            <form id="leadForm" action="mailto:prodrive@gmail.com" method="post" enctype="text/plain">
+              <div class="form-group">
+                <label for="name">Imię i nazwisko</label>
+                <input id="name" name="Imię i nazwisko" type="text" placeholder="np. Anna Kowalska" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input id="phone" name="Telefon" type="tel" placeholder="np. 882 700 801" required />
+              </div>
+
+              <div class="form-group">
+                <label for="course">Czego potrzebujesz?</label>
+                <select id="course" name="Rodzaj kursu" required>
+                  <option value="">Wybierz opcję</option>
+                  <option>Kurs podstawowy kat. B</option>
+                  <option>Pakiet komfort</option>
+                  <option>Jazdy doszkalające</option>
+                  <option>Nie wiem — proszę o kontakt</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="Wiadomość" placeholder="Napisz krótko, na czym Ci zależy"></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Wyślij zgłoszenie</button>
+              <div id="formSuccess" class="form-success">Dziękujemy! Formularz jest gotowy do wysłania na adres prodrive@gmail.com.</div>
+            </form>
           </div>
-        </a>
-
-      </div>
-    </div>
-
-    <div class="contact-box">
-      <form id="leadForm" action="mailto:prodrive@gmail.com" method="post" enctype="text/plain">
-
-        <div class="form-group">
-          <label for="name">Imię i nazwisko</label>
-          <input id="name" name="Imię i nazwisko" type="text" placeholder="np. Anna Kowalska" required />
         </div>
-
-        <div class="form-group">
-          <label for="phone">Telefon</label>
-          <input id="phone" name="Telefon" type="tel" placeholder="np. 882 700 801" required />
-        </div>
-
-        <div class="form-group">
-          <label for="course">Czego potrzebujesz?</label>
-          <select id="course" name="Rodzaj kursu" required>
-            <option value="">Wybierz opcję</option>
-            <option>Kurs podstawowy kat. B</option>
-            <option>Pakiet komfort</option>
-            <option>Jazdy doszkalające</option>
-            <option>Nie wiem — proszę o kontakt</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Wiadomość</label>
-          <textarea id="message" name="Wiadomość" placeholder="Napisz krótko, na czym Ci zależy"></textarea>
-        </div>
-
-        <button class="btn btn-primary" type="submit">Wyślij zgłoszenie</button>
-        <div id="formSuccess" class="form-success">Dziękujemy! Formularz jest gotowy do wysłania na adres prodrive@gmail.com.</div>
-
-      </form>
-    </div>
-
-  </div>
-</section>
+      </section>
     </div>
   </main>
 
@@ -1414,6 +1459,14 @@
         <button data-page-link="contact">Kontakt</button>
         <a href="tel:882700801">882 700 801</a>
         <a href="mailto:prodrive@gmail.com">prodrive@gmail.com</a>
+        <div class="footer-socials" aria-label="Social media ProDrive">
+          <a href="https://www.instagram.com/prodrive_lublin/" target="_blank" rel="noopener noreferrer" aria-label="Instagram ProDrive">
+            <svg viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 12 16.5 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.25 6a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 17.25 6z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61586855786739" target="_blank" rel="noopener noreferrer" aria-label="Facebook ProDrive">
+            <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
 
