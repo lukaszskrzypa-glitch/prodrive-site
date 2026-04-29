@@ -621,11 +621,11 @@
     }
 
     .contact-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 56px;
-      align-items: start;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
 
     .contact-methods {
       display: grid;
@@ -822,9 +822,10 @@
     }
 
     @media (max-width: 768px) {
-      section {
-        padding: 64px 18px;
-      }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
       h1 {
         font-size: clamp(38px, 12vw, 44px);
