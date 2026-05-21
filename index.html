@@ -1015,7 +1015,25 @@
         gap: 12px;
       }
     }
+.google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff6b00, #ff8c3a);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.25);
+}
 
+.google-review-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 107, 0, 0.35);
+}
     @media (max-width: 480px) {
       section {
         padding: 58px 16px;
@@ -1333,8 +1351,8 @@
       <section class="page-hero">
         <div class="container">
           <div class="eyebrow">Opinie</div>
-          <h1>Kursanci doceniają spokojne podejście i konkretną naukę.</h1>
-          <p>Najważniejsze jest to, żeby kursant po każdej jeździe czuł, że zrobił krok do przodu.</p>
+          <h1>Kursanci doceniają profesjonalne podejście i konkretną naukę.</h1>
+          <p>Najważniejsze jest to, żeby kursant po każdej jeździe czuł, że zrobił krok do przodu!</p>
         </div>
       </section>
 
@@ -1360,10 +1378,29 @@
             </article>
 
             <article class="card review-card">
+              <div class="stars">★★★★★</div>
+              <p>„Najlepszy instruktor, jakiego można sobie wymarzyć🥰! Wspaniały człowiek- miły, cierpliwy i wspierający. Atmosfera na jazdach zawsze mega pozytywna, bez stresu i nerwów. Wszystko tłumaczy krok po kroku i daje dużo praktycznych wskazówek. Każda jazda była dobrze wykorzystana. Jak prawo jazdy, to tylko z nim! ☺️🫶🏻”</p>
+              <div class="author">Zuzanna K.</div>
+            </article>
+
+            <article class="card review-card">
+              <div class="stars">★★★★★</div>
+              <p>„Pełen profesjonalizm, spokój i świetne podejście do nauki. Zdecydowanie polecam”</p>
+              <div class="author">Pablox</div>
+            </article>
+
+            <article class="card review-card">
               <div class="stars">★★★★</div>
               <p>„Na lepszego instruktora nie mogłam trafić. Mikołaj nie tylko przygotował mnie na egzamin w Wordzie, ale też do jazdy samochodem już po egzaminie, a atmosfera jaka panowała w samochodzie tylko ułatwiła naukę jazdy Z całego serca mogę polecić Mikołaja!”</p>
               <div class="author">Nicola F.</div>
             </article>
+            <a 
+  href="https://g.page/r/CRKi66fYCFH0EBM/review" 
+  target="_blank" 
+  class="google-review-btn"
+>
+  ⭐ Dodaj opinię w Google
+</a>
           </div>
         </div>
       </section>
