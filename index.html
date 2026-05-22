@@ -1103,12 +1103,12 @@
 <body>
   <header class="navbar">
     <div class="navbar-inner">
-      <a class="logo" data-page-link="home" href="/" aria-label="ProDrive — strona główna">
+      <a class="logo" data-page-link="start" href="/" aria-label="ProDrive — strona główna">
         <img class="logo-img" src="logo_prodrive.png" alt="ProDrive — Akademia Bezpiecznej Jazdy" />
       </a>
 
       <nav class="nav-links" aria-label="Menu główne">
-        <button class="nav-link active" data-page-link="home">Start</button>
+        <button class="nav-link active" data-page-link="start">Start</button>
         <button class="nav-link" data-page-link="o nas">O nas</button>
         <button class="nav-link" data-page-link="dlaczegomy">Dlaczego my</button>
         <button class="nav-link" data-page-link="oferta">Oferta</button>
@@ -1126,7 +1126,7 @@
   </header>
 
   <main>
-    <div id="home" class="page active">
+    <div id="start" class="page active">
       <section class="hero">
         <div class="hero-grid">
           <div class="hero-content">
@@ -1486,12 +1486,13 @@
                   <span>prodrive.lublin@gmail.com</span>
                 </div>
               </a>
-<a class="kontakt-method" 
+<a class="contact-method" 
    href="https://maps.google.com/?q=ul.+Wolska+11A/lok.6+Lublin" 
    target="_blank">
 
-  <div class="kontakt-item">
-    <div class="kontakt-icon">
+  <div class="contact-item">
+
+    <div class="contact-icon">
       <i class="fa-solid fa-location-dot"></i>
     </div>
 
@@ -1499,6 +1500,7 @@
       <strong>Adres</strong>
       <span>ul. Wolska 11A/lok.6, 20-411 Lublin</span>
     </div>
+
   </div>
 
 </a>
@@ -1565,7 +1567,7 @@
   <footer class="footer">
     <div class="footer-inner">
   <div class="footer-brand">
-    <a class="logo" data-page-link="home" href="/" aria-label="ProDrive — strona główna">
+    <a class="logo" data-page-link="start" href="/" aria-label="ProDrive — strona główna">
       <img class="logo-img" src="logo_prodrive.png" alt="ProDrive — Akademia Bezpiecznej Jazdy" />
     </a>
 
@@ -1646,7 +1648,7 @@
 
     window.addEventListener('load', () => {
       const pageFromHash = window.location.hash.replace('#', '');
-      const allowedPages = ['home', 'o nas', 'dlaczegomy', 'oferta', 'opinie', 'kontakt'];
+      const allowedPages = ['start', 'o nas', 'dlaczegomy', 'oferta', 'opinie', 'kontakt'];
       if (allowedPages.includes(pageFromHash)) {
         showPage(pageFromHash);
       }
