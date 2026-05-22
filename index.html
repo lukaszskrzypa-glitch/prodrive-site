@@ -21,8 +21,8 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProDrive — Akademia Bezpiecznej Jazdy</title>
-  <meta name="description" content="ProDrive — nowoczesna szkoła jazdy. Kursy prawa jazdy, jazdy doszkalające i przygotowanie do egzaminu." />
+  <title>ProDrive — Nauka Jazdy Lublin | Kurs prawa jazdy</title>
+  <meta name="description" content="ProDrive — nowoczesna szkoła jazdy w Lublinie. Kurs prawa jazdy kat. B, jazdy doszkalające i spokojne przygotowanie do egzaminu." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -815,6 +815,38 @@
       align-items: center;
     }
 
+
+    .number i {
+      font-size: 17px;
+      line-height: 1;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .footer-address p {
+      margin: 0;
+      color: rgba(255,255,255,.7);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .footer-address a {
+      display: inline-flex;
+      margin-top: 8px;
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .footer-address a:hover {
+      color: #fff;
+    }
+
     .footer-links {
       display: flex;
       align-items: center;
@@ -1109,8 +1141,8 @@
 
       <nav class="nav-links" aria-label="Menu główne">
         <button class="nav-link active" data-page-link="start">Start</button>
-        <button class="nav-link" data-page-link="o nas">O nas</button>
-        <button class="nav-link" data-page-link="dlaczegomy">Dlaczego my</button>
+        <button class="nav-link" data-page-link="o-nas">O nas</button>
+        <button class="nav-link" data-page-link="dlaczego-my">Dlaczego my</button>
         <button class="nav-link" data-page-link="oferta">Oferta</button>
         <button class="nav-link" data-page-link="opinie">Opinie</button>
         <a class="nav-phone" href="tel:882700801">882 700 801</a>
@@ -1176,7 +1208,7 @@
       </section>
     </div>
 
-    <div id="o nas" class="page">
+    <div id="o-nas" class="page">
       <section class="page-hero">
         <div class="container">
           <div class="eyebrow">O nas</div>
@@ -1271,7 +1303,7 @@
     </div>
     
 
-    <div id="dlaczegomy" class="page">
+    <div id="dlaczego-my" class="page">
       <section class="page-hero">
         <div class="container">
           <div class="eyebrow">Dlaczego my</div>
@@ -1472,7 +1504,7 @@
 
             <div class="kontakt-methods">
               <a class="kontakt-method" href="tel:882700801">
-                <div class="number">☎</div>
+                <div class="number" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
                 <div>
                   <strong>Telefon</strong>
                   <span>882 700 801</span>
@@ -1480,30 +1512,25 @@
               </a>
 
               <a class="kontakt-method" href="mailto:prodrive.lublin@gmail.com">
-                <div class="number">@</div>
+                <div class="number" aria-hidden="true"><i class="fa-solid fa-at"></i></div>
                 <div>
                   <strong>E-mail</strong>
                   <span>prodrive.lublin@gmail.com</span>
                 </div>
               </a>
-<a class="contact-method" 
-   href="https://maps.google.com/?q=ul.+Wolska+11A/lok.6+Lublin" 
-   target="_blank">
+<a class="kontakt-method" 
+                 href="https://maps.google.com/?q=ul.+Wolska+11A/lok.6+Lublin" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                <div class="number" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <strong>Adres</strong>
+                  <span>ul. Wolska 11A/lok.6, 20-411 Lublin</span>
+                </div>
+              </a>
 
-  <div class="contact-item">
-
-    <div class="contact-icon">
-      <i class="fa-solid fa-location-dot"></i>
-    </div>
-
-    <div>
-      <strong>Adres</strong>
-      <span>ul. Wolska 11A/lok.6, 20-411 Lublin</span>
-    </div>
-
-  </div>
-
-</a>
               <a class="kontakt-method" href="https://www.instagram.com/prodrive_lublin/" target="_blank" rel="noopener noreferrer">
                 <div class="number" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 12 16.5 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.25 6a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 17.25 6z"/></svg>
@@ -1572,7 +1599,7 @@
     </a>
 
     <div class="footer-address">
-      <p>📍 ul. Wolska 11A/lok.6<br>🗺️20-411 Lublin</p>
+      <p>ul. Wolska 11A/lok.6<br>20-411 Lublin</p>
       <a href="https://maps.google.com/?q=ul.+Wolska+11A/lok.6+Lublin" target="_blank">
         Otwórz w Google Maps
       </a>
@@ -1580,8 +1607,8 @@
   </div>
 
       <div class="footer-links">
-        <button data-page-link="o nas">O nas</button>
-        <button data-page-link="dlaczegomy">Dlaczego my</button>
+        <button data-page-link="o-nas">O nas</button>
+        <button data-page-link="dlaczego-my">Dlaczego my</button>
         <button data-page-link="oferta">Oferta</button>
         <button data-page-link="opinie">Opinie</button>
         <button data-page-link="kontakt">Kontakt</button>
@@ -1619,7 +1646,12 @@
         link.classList.toggle('active', link.dataset.pageLink === pageName);
       });
 
-      window.location.hash = pageName;
+      if (pageName === 'start') {
+        history.pushState(null, '', '/');
+      } else {
+        history.pushState(null, '', '#' + pageName);
+      }
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       if (navLinks && burger) {
@@ -1646,13 +1678,19 @@
       });
     }
 
-    window.addEventListener('load', () => {
+    function showPageFromUrl() {
       const pageFromHash = window.location.hash.replace('#', '');
-      const allowedPages = ['start', 'o nas', 'dlaczegomy', 'oferta', 'opinie', 'kontakt'];
+      const allowedPages = ['o-nas', 'dlaczego-my', 'oferta', 'opinie', 'kontakt'];
+
       if (allowedPages.includes(pageFromHash)) {
         showPage(pageFromHash);
+      } else {
+        showPage('start');
       }
-    });
+    }
+
+    window.addEventListener('load', showPageFromUrl);
+    window.addEventListener('popstate', showPageFromUrl);
 
     if (form && formSuccess) {
       form.addEventListener('submit', () => {
