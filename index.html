@@ -494,17 +494,17 @@
 }
     }
     .offer-grid {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(330px, 420px));
+  justify-content: center;
+  gap: 32px;
+  align-items: stretch;
 }
 
-.offer-grid .price-card {
-    max-width: 430px;
-    width: 100%;
+.offer-grid .oferta-card {
+  width: 100%;
+  min-height: 560px;
 }
-
     .cards-grid.four {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -644,9 +644,9 @@
     }
 
     .oferta-card .btn {
-      width: 100%;
-      margin-top: auto;
-    }
+  width: 100%;
+  margin-top: auto;
+}
 
     .review-card {
       min-height: 260px;
