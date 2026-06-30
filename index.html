@@ -75,7 +75,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255,106,0,.6),
+    rgba(238, 135, 8,.6),
     transparent
   );
   margin-bottom: 50px;
@@ -102,7 +102,7 @@
     input:focus-visible,
     textarea:focus-visible,
     select:focus-visible {
-      outline: 3px solid rgba(240, 90, 26, 0.5);
+      outline: 3px solid rgba(238, 135, 8, 0.5);
       outline-offset: 3px;
     }
 
@@ -218,13 +218,13 @@
     .btn-primary {
       background: var(--orange);
       color: #fff;
-      box-shadow: 0 14px 34px rgba(240, 90, 26, 0.28);
+      box-shadow: 0 14px 34px rgba(238, 135, 8, 0.28);
     }
 
     .btn-primary:hover {
       background: var(--orange-dark);
       transform: translateY(-3px);
-      box-shadow: 0 18px 38px rgba(240, 90, 26, 0.36);
+      box-shadow: 0 18px 38px rgba(238, 135, 8, 0.36);
     }
 
     .btn-secondary {
@@ -470,7 +470,7 @@
     .page-hero {
       padding: 90px 24px 56px;
       background:
-        radial-gradient(circle at 80% 20%, rgba(240, 90, 26, 0.16), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(238, 135, 8, 0.16), transparent 30%),
         #0d0d0d;
       border-bottom: 1px solid var(--border);
     }
@@ -487,24 +487,24 @@
     }
 
     .cards-grid {
-    display: flex;
-    justify-content: center;
-    gap: 36px;
-    flex-wrap: wrap;
-}
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
     }
-    .offer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(330px, 420px));
-  justify-content: center;
-  gap: 32px;
-  align-items: stretch;
-}
 
-.offer-grid .oferta-card {
-  width: 100%;
-  min-height: 560px;
-}
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(300px, 420px));
+      justify-content: center;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .offer-grid .oferta-card {
+      width: 100%;
+      min-height: 560px;
+    }
+
     .cards-grid.four {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -520,7 +520,7 @@
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: rgba(240, 90, 26, 0.48);
+      border-color: rgba(238, 135, 8, 0.48);
     }
 
     .icon {
@@ -530,7 +530,7 @@
       place-items: center;
       margin-bottom: 22px;
       border-radius: 13px;
-      background: rgba(240, 90, 26, 0.14);
+      background: rgba(238, 135, 8, 0.14);
       color: var(--orange);
       font-weight: 900;
     }
@@ -557,7 +557,7 @@
       display: grid;
       place-items: center;
       border-radius: 12px;
-      background: rgba(240, 90, 26, 0.14);
+      background: rgba(238, 135, 8, 0.14);
       color: var(--orange);
       font-weight: 900;
     }
@@ -582,7 +582,7 @@
 
     .oferta-page {
       background:
-        radial-gradient(circle at 18% 12%, rgba(240, 90, 26, 0.13), transparent 30%),
+        radial-gradient(circle at 18% 12%, rgba(238, 135, 8, 0.13), transparent 30%),
         #0d0d0d;
     }
 
@@ -594,8 +594,8 @@
     }
 
     .oferta-card.recommended {
-      border-color: rgba(240, 90, 26, 0.72);
-      background: linear-gradient(180deg, rgba(240, 90, 26, 0.13), rgba(255, 255, 255, 0.045));
+      border-color: rgba(238, 135, 8, 0.72);
+      background: linear-gradient(180deg, rgba(238, 135, 8, 0.13), rgba(255, 255, 255, 0.045));
       transform: translateY(-10px);
     }
 
@@ -609,7 +609,7 @@
       margin-bottom: 18px;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(240, 90, 26, 0.16);
+      background: rgba(238, 135, 8, 0.16);
       color: var(--orange);
       font-size: 13px;
       font-weight: 900;
@@ -701,11 +701,11 @@
 
     .kontakt-method:hover {
       transform: translateY(-2px);
-      border-color: rgba(240, 90, 26, 0.5);
+      border-color: rgba(238, 135, 8, 0.5);
     }
 
     .kontakt-method:hover .number {
-      background: rgba(240, 90, 26, 0.2);
+      background: rgba(238, 135, 8, 0.2);
     }
 
     .kontakt-method strong {
@@ -776,15 +776,15 @@
     textarea:focus {
       outline: none;
       border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(240, 90, 26, 0.18);
+      box-shadow: 0 0 0 3px rgba(238, 135, 8, 0.18);
     }
 
     .form-success {
       display: none;
       padding: 14px 16px;
       border-radius: 14px;
-      border: 1px solid rgba(240, 90, 26, 0.38);
-      background: rgba(240, 90, 26, 0.13);
+      border: 1px solid rgba(238, 135, 8, 0.38);
+      background: rgba(238, 135, 8, 0.13);
       color: #fff;
       font-weight: 800;
     }
@@ -907,8 +907,8 @@
 
     .footer-socials a:hover {
       transform: translateY(-2px);
-      border-color: rgba(240, 90, 26, 0.5);
-      background: rgba(240, 90, 26, 0.12);
+      border-color: rgba(238, 135, 8, 0.5);
+      background: rgba(238, 135, 8, 0.12);
     }
 
     .footer-socials svg {
@@ -1064,6 +1064,16 @@
         gap: 22px;
       }
 
+      .offer-grid {
+        grid-template-columns: minmax(0, 520px);
+        justify-content: center;
+        gap: 22px;
+      }
+
+      .offer-grid .oferta-card {
+        min-height: auto;
+      }
+
       .oferta-card.recommended {
         order: -1;
       }
@@ -1118,19 +1128,23 @@
   justify-content: center;
   padding: 14px 28px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #ff6b00, #ff8c3a);
+  background: linear-gradient(135deg, var(--orange), #F1A72E);
   color: white;
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
   transition: 0.3s ease;
-  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(238, 135, 8, 0.25);
 }
 
 .google-review-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(255, 107, 0, 0.35);
+  box-shadow: 0 15px 35px rgba(238, 135, 8, 0.35);
 }
+    .cards-grid .google-review-btn {
+      justify-self: start;
+    }
+
     @media (max-width: 480px) {
       section {
         padding: 58px 16px;
@@ -1165,7 +1179,7 @@
   },
   "sameAs": [
     "https://www.instagram.com/prodrive_lublin/",
-    "https://www.facebook.com/"
+    "https://www.facebook.com/profile.php?id=61586855786739"
   ]
 }
 </script>
@@ -1553,7 +1567,6 @@
                 <select id="course" name="Rodzaj kursu" required>
                   <option value="">Wybierz opcję</option>
                   <option>Kurs podstawowy kat. B</option>
-                  <option>Pakiet komfort</option>
                   <option>Jazdy doszkalające</option>
                   <option>Nie wiem — proszę o kontakt</option>
                 </select>
