@@ -143,6 +143,10 @@
       margin-bottom: 48px;
     }
 
+    .about-why {
+      padding-top: 24px;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -1195,7 +1199,6 @@
       <nav class="nav-links" aria-label="Menu główne">
         <button class="nav-link active" data-page-link="start">Start</button>
         <button class="nav-link" data-page-link="o-nas">O nas</button>
-        <button class="nav-link" data-page-link="dlaczego-my">Dlaczego my</button>
         <button class="nav-link" data-page-link="oferta">Oferta</button>
         <button class="nav-link" data-page-link="opinie">Opinie</button>
         <a class="nav-phone" href="tel:882700801">tel. 882 700 801</a>
@@ -1273,8 +1276,9 @@
       <section>
         <div class="container split-grid">
           <div>
-            
-            <h2>Dlaczego kursanci wybierają ProDrive?</h2>
+            <h2>Spokój. Technika. Pewność.</h2>
+            <p>Każda jazda ma konkretny cel: budować pewność za kierownicą, uczyć dobrych nawyków i spokojnie przygotowywać do samodzielnej jazdy po Lublinie i nie tylko.</p>
+
             <div class="list">
               <div class="list-item">
                 <div class="number">01</div>
@@ -1300,57 +1304,20 @@
             </div>
           </div>
 
-          <div class="photo-panel" aria-label="Auto ProDrive na drodze">
+          <div class="photo-panel" aria-label="Samochód ProDrive na drodze">
             <img src="IMG_1619.jpg" alt="Samochód szkoły jazdy ProDrive w Lublinie w trakcie jazdy">
             <div class="hero-card">
-              <strong>Spokój. Technika. Pewność.</strong>
-              <span>To trzy elementy, na których budujemy każdą lekcję jazdy w ProDrive.</span>
+              <strong>Indywidualne podejście</strong>
+              <span>Każdy kursant ma inne tempo, dlatego dopasowujemy naukę do konkretnej osoby.</span>
             </div>
           </div>
         </div>
       </section>
-    </div>
-    
 
-    <div id="dlaczego-my" class="page">
-      <section class="page-hero">
-        <div class="container">
-          <div class="eyebrow">Dlaczego my</div>
-          <h1>Nowoczesna nauka jazdy bez presji i chaosu.</h1>
-          <p>ProDrive to czytelny proces, spokojna atmosfera i lekcje, które naprawdę budują pewność za kierownicą.</p>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <div class="cards-grid four">
-            <article class="card">
-              <div class="icon">01</div>
-              <h3>Bez stresu</h3>
-              <p>Uczymy cierpliwie i spokojnie. Błędy traktujemy jako element nauki, a nie powód do presji.</p>
-            </article>
-            <article class="card">
-              <div class="icon">02</div>
-              <h3>Konkretny feedback</h3>
-              <p>Po każdej jeździe wiesz, co było dobre, co poprawić i nad czym pracować dalej.</p>
-            </article>
-            <article class="card">
-              <div class="icon">03</div>
-              <h3>Praktyczne trasy</h3>
-              <p>Ćwiczymy realne sytuacje drogowe, nie tylko suche schematy potrzebne na egzamin.</p>
-            </article>
-            <article class="card">
-              <div class="icon">04</div>
-              <h3>Pewność po kursie</h3>
-              <p>Chcemy, żebyś po zdaniu egzaminu naprawdę czuł się gotowy do samodzielnej jazdy.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section>
+      <section class="about-why">
         <div class="container">
           <div class="section-header">
-            <div class="eyebrow">Dlaczego my</div>
+            <div class="eyebrow">Dlaczego ProDrive</div>
             <h2>Prościej, czytelniej i skuteczniej.</h2>
             <p>Od pierwszego kontaktu wiesz, co robimy, po co to robimy i jak wygląda kolejny krok.</p>
           </div>
@@ -1364,12 +1331,12 @@
             <article class="card">
               <div class="icon">↗</div>
               <h3>Stały progres</h3>
-              <p>Nasza Szkoła znajduje się na ul. Wolskiej 11A/lok.6, a każda lekcja ma sens i prowadzi do większej samodzielności za kierownicą.</p>
+              <p>Każda lekcja ma sens i prowadzi do większej samodzielności za kierownicą.</p>
             </article>
             <article class="card">
               <div class="icon">●</div>
               <h3>Realny ruch</h3>
-              <p>Ćwiczymy sytuacje, które naprawdę spotkasz na drodze — nie tylko schematy egzaminacyjne.</p>
+              <p>Ćwiczymy sytuacje, które naprawdę spotkasz na drodze — nie tylko suche schematy egzaminacyjne.</p>
             </article>
             <article class="card">
               <div class="icon">★</div>
@@ -1603,7 +1570,6 @@
 
       <div class="footer-links">
         <button data-page-link="o-nas">O nas</button>
-        <button data-page-link="dlaczego-my">Dlaczego my</button>
         <button data-page-link="oferta">Oferta</button>
         <button data-page-link="opinie">Opinie</button>
         <button data-page-link="kontakt">Kontakt</button>
@@ -1675,10 +1641,17 @@
 
     function showPageFromUrl() {
       const pageFromHash = window.location.hash.replace('#', '');
-      const allowedPages = ['o-nas', 'dlaczego-my', 'oferta', 'opinie', 'kontakt'];
+      const legacyPages = {
+        'dlaczego-my': 'o-nas'
+      };
+      const pageName = legacyPages[pageFromHash] || pageFromHash;
+      const allowedPages = ['o-nas', 'oferta', 'opinie', 'kontakt'];
 
-      if (allowedPages.includes(pageFromHash)) {
-        showPage(pageFromHash);
+      if (allowedPages.includes(pageName)) {
+        if (pageFromHash === 'dlaczego-my') {
+          history.replaceState(null, '', '#o-nas');
+        }
+        showPage(pageName);
       } else {
         showPage('start');
       }
