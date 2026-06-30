@@ -491,6 +491,17 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
     }
+    .offer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.offer-grid .price-card {
+    max-width: 430px;
+    width: 100%;
+}
 
     .cards-grid.four {
       grid-template-columns: repeat(4, 1fr);
@@ -1365,17 +1376,17 @@
 
       <section class="oferta-page">
         <div class="container">
-          <div class="cards-grid">
+          <div class="offer-grid">
             <article class="card oferta-card recommended">
   <span class="badge">Najczęściej wybierane</span>
   <h3>Kurs podstawowy Kat. B</h3>
               <p>Dla osób, które zaczynają naukę jazdy od zera i chcą przejść cały proces krok po kroku.</p>
               <div class="price">4 000 zł</div>
               <ul>
-                <li>• 30 godzin zajęć praktycznych</li>
-                <li>• teoria zgodna z aktualnymi przepisami</li>
-                <li>• przygotowanie do egzaminu WORD</li>
-                <li>• indywidualne podejście do kursanta</li>
+                <li>30 godzin zajęć praktycznych</li>
+                <li>teoria zgodna z aktualnymi przepisami</li>
+                <li>przygotowanie do egzaminu WORD</li>
+                <li>indywidualne podejście do kursanta</li>
               </ul>
               <button class="btn btn-primary" data-page-link="kontakt">Wybieram ten kurs</button>
             </article>
