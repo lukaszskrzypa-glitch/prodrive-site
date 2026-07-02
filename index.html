@@ -827,6 +827,16 @@
       border-top: 1px solid var(--border);
     }
 
+    .course-start-date {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+.course-start-date strong {
+  color: var(--orange);
+}
+    
     .footer-inner {
       max-width: var(--container);
       margin: 0 auto;
@@ -1015,7 +1025,45 @@
         padding: 13px 12px;
         text-align: left;
       }
+.course-announcement {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, rgba(238, 135, 8, 0.18), rgba(238, 135, 8, 0.06));
+  border-bottom: 1px solid rgba(238, 135, 8, 0.28);
+}
 
+.course-announcement-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.course-announcement p {
+  margin: 0;
+  max-width: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.course-announcement .btn {
+  min-height: 42px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .course-announcement {
+    padding: 14px 18px;
+  }
+
+  .course-announcement-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .course-announcement .btn {
+    width: 100%;
+  }
+}
       .nav-links .btn {
         width: 100%;
         margin-top: 8px;
@@ -1212,7 +1260,18 @@
       </button>
     </div>
   </header>
+<div class="course-announcement">
+  <div class="container course-announcement-inner">
+    <p>
+      <strong>Nowy kurs prawa jazdy kat. B startuje 17 lipca.</strong>
+      Zapisy już trwają — liczba miejsc ograniczona.
+    </p>
 
+    <button class="btn btn-primary" data-page-link="kontakt">
+      Zapisz się
+    </button>
+  </div>
+</div>
   <main>
     <div id="start" class="page active">
       <section class="hero">
@@ -1365,13 +1424,16 @@
   <h3>Kurs podstawowy Kat. B</h3>
               <p>Dla osób, które zaczynają naukę jazdy od zera i chcą przejść cały proces krok po kroku.</p>
               <div class="price">3 700 zł</div>
+              <div class="course-start-date">
+  Najbliższy start kursu: <strong>17 lipca</strong>
+</div>
               <ul>
                 <li>30 godzin zajęć praktycznych</li>
                 <li>teoria zgodna z aktualnymi przepisami</li>
                 <li>przygotowanie do egzaminu WORD</li>
                 <li>indywidualne podejście do kursanta</li>
               </ul>
-              <button class="btn btn-primary" data-page-link="kontakt">Wybieram ten kurs</button>
+              <button class="btn btn-primary" data-page-link="kontakt">Zapisz się na kurs</button>
             </article>
 
             <article class="card oferta-card">
@@ -1384,7 +1446,7 @@
                 <li>jazda po mieście</li>
                 <li>redukcja stresu</li>
               </ul>
-              <button class="btn btn-primary" data-page-link="kontakt">Wybieram ten kurs</button>
+              <button class="btn btn-primary" data-page-link="kontakt">Zapisz się na kurs</button>
             </article>
           </div>
         </div>
