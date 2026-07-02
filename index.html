@@ -111,7 +111,73 @@
       max-width: var(--container);
       margin: 0 auto;
     }
+.course-banner {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  background: #111;
+  border-top: 1px solid rgba(238, 135, 8, 0.35);
+  border-bottom: 1px solid rgba(238, 135, 8, 0.35);
+}
 
+.course-banner-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.course-banner-track {
+  display: flex;
+  width: max-content;
+  animation: courseMarquee 10s linear infinite;
+  will-change: transform;
+}
+
+.course-banner-track span {
+  display: inline-block;
+  flex: 0 0 auto;
+  padding: 14px 34px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.course-banner-track strong {
+  color: var(--orange);
+}
+
+@keyframes courseMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.course-banner:hover .course-banner-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .course-banner-track span {
+    padding: 12px 22px;
+    font-size: 12px;
+  }
+
+  .course-banner-track {
+    animation-duration: 8s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-banner-track {
+    animation: none;
+  }
+}
     .page {
       display: none;
       min-height: calc(100vh - 72px);
@@ -1222,7 +1288,26 @@
       </button>
     </div>
   </header>
+<div class="course-banner" aria-label="Informacja o nowym kursie">
+  <div class="course-banner-marquee">
+    <div class="course-banner-track">
+      <span>
+        NOWY KURS PRAWA JAZDY KAT. B STARTUJE 17 LIPCA
+        <strong>— ZAPISZ SIĘ JUŻ DZIŚ —</strong>
+      </span>
 
+      <span aria-hidden="true">
+        NOWY KURS PRAWA JAZDY KAT. B STARTUJE 17 LIPCA
+        <strong>— ZAPISZ SIĘ JUŻ DZIŚ —</strong>
+      </span>
+
+      <span aria-hidden="true">
+        NOWY KURS PRAWA JAZDY KAT. B STARTUJE 17 LIPCA
+        <strong>— ZAPISZ SIĘ JUŻ DZIŚ —</strong>
+      </span>
+    </div>
+  </div>
+</div>
   <main>
     <div id="start" class="page active">
       <section class="hero">
