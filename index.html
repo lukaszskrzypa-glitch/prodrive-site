@@ -114,6 +114,7 @@
 .course-banner {
   position: relative;
   z-index: 10;
+  width: 100%;
   overflow: hidden;
   background: #111;
   border-top: 1px solid rgba(238, 135, 8, 0.35);
@@ -126,10 +127,25 @@
 }
 
 .course-banner-track {
-  display: flex;
-  width: max-content;
+  display: inline-block;
+  white-space: nowrap;
   will-change: transform;
-  animation: courseMarquee 15s linear infinite;
+  animation: courseMarquee 13s linear infinite;
+}
+
+.course-banner-track span {
+  display: inline-block;
+  padding: 14px 34px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.course-banner-track strong {
+  color: var(--orange);
 }
 
 @keyframes courseMarquee {
@@ -142,36 +158,6 @@
   }
 }
 
-.course-banner-track span {
-  display: inline-block;
-  flex: 0 0 auto;
-  padding: 14px 34px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-
-.course-banner-track strong {
-  color: var(--orange);
-}
-
-@keyframes courseMarquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-33.333%);
-  }
-}
-
-.course-banner:hover .course-banner-track {
-  animation-play-state: paused;
-}
-
 @media (max-width: 768px) {
   .course-banner-track span {
     padding: 12px 22px;
@@ -179,13 +165,14 @@
   }
 
   .course-banner-track {
-    animation-duration: 8s;
+    animation-duration: 10s;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .course-banner-track {
     animation: none;
+    transform: none;
   }
 }
     .page {
@@ -1302,16 +1289,6 @@
   <div class="course-banner-marquee">
     <div class="course-banner-track">
       <span>
-        NOWY KURS PRAWA JAZDY KAT. B STARTUJE 17 LIPCA
-        <strong>— ZAPISZ SIĘ JUŻ DZIŚ —</strong>
-      </span>
-
-      <span aria-hidden="true">
-        NOWY KURS PRAWA JAZDY KAT. B STARTUJE 17 LIPCA
-        <strong>— ZAPISZ SIĘ JUŻ DZIŚ —</strong>
-      </span>
-
-      <span aria-hidden="true">
         NOWY KURS PRAWA JAZDY KAT. B STARTUJE 17 LIPCA
         <strong>— ZAPISZ SIĘ JUŻ DZIŚ —</strong>
       </span>
