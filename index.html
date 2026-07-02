@@ -128,8 +128,33 @@
 .course-banner-track {
   display: flex;
   width: max-content;
-  animation: courseMarquee 10s linear infinite;
+  transform: translateX(100vw);
   will-change: transform;
+  animation:
+    courseIntro 6s linear forwards,
+    courseMarquee 10s linear 6s infinite;
+}
+
+/* Pierwsze wejście: od prawej strony ekranu */
+@keyframes courseIntro {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Potem płynna pętla w lewo */
+@keyframes courseMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
 }
 
 .course-banner-track span {
